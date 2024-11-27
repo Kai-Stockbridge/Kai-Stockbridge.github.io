@@ -57,32 +57,6 @@ header p {
   font-size: 1.2em;
 }
 
-/* Navigation */
-nav {
-  background-color: #333;
-  padding: 10px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-
-nav li {
-  margin: 0 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1em;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
 /* Main Sections */
 section {
   background-color: white;
@@ -113,10 +87,12 @@ button {
   border-radius: 5px;
   display: block;
   margin: 0 auto;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
 }
 
 button:hover {
   background-color: #45a049;
+  transform: scale(1.1);
 }
 
 /* Form Styling */
@@ -124,6 +100,11 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+form label {
+  font-size: 1.1em;
+  color: #333;
 }
 
 form input, form textarea {
@@ -164,6 +145,13 @@ footer p {
   margin: 0;
 }
 
+/* Hover Effect on Sections */
+section:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   body {
@@ -187,7 +175,21 @@ footer p {
     padding: 12px 25px; /* Slightly smaller button on mobile */
   }
 
+  section h2 {
+    font-size: 1.5em; /* Smaller font size for headings */
+  }
+
+  section p {
+    font-size: 1em; /* Adjusted font size for smaller screens */
+  }
+
   form input, form textarea {
-    font-size: 1em; /* Ensures input fields fit better on smaller screens */
+    width: 100%; /* Ensure form elements take full width on mobile */
+    font-size: 1em; 
+  }
+
+  form button {
+    padding: 12px;
+    font-size: 1.2em; /* Adjusted button size */
   }
 }
