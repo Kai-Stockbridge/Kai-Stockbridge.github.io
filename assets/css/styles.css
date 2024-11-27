@@ -1,4 +1,4 @@
- /* General Reset */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,11 +12,13 @@ body {
   color: #333;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   margin: 0;
+  padding-bottom: 60px; /* Adds space for the fixed footer */
 }
 
+/* Container for content */
 .container {
   width: 100%;
   max-width: 800px; /* Centers the content */
@@ -24,11 +26,13 @@ body {
   padding: 20px;
 }
 
+/* Headings */
 h1, h2 {
   color: #004080;
   text-align: center;
 }
 
+/* Paragraphs */
 p {
   text-align: center;
   font-size: 1.1em;
@@ -98,6 +102,7 @@ section p {
   margin-bottom: 20px;
 }
 
+/* Button Styling */
 button {
   background-color: #4CAF50;
   color: white;
@@ -157,4 +162,32 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 80px; /* More space for footer on smaller screens */
+  }
+
+  header h1 {
+    font-size: 2em; /* Smaller heading on mobile */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  button {
+    padding: 12px 25px; /* Slightly smaller button on mobile */
+  }
+
+  form input, form textarea {
+    font-size: 1em; /* Ensures input fields fit better on smaller screens */
+  }
 }
