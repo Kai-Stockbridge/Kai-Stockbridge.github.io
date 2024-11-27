@@ -9,14 +9,56 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to Our Government Service</h1>
-    <p>Here's an example of a simple, accessible interface.</p>
+    <div class="container">
+      <h1>Welcome to Government Digital Services</h1>
+      <p>Making services simpler and more accessible for everyone</p>
+    </div>
   </header>
 
-  <section>
-    <h2>Personalized Dashboard</h2>
-    <button onclick="alert('Here is your personalized service info!')">Click to Personalize</button>
-  </section>
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="#dashboard">Personalized Dashboard</a></li>
+        <li><a href="#about">About the Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section id="dashboard" class="section">
+      <div class="container">
+        <h2>Your Personalized Dashboard</h2>
+        <p>Get the information you need, tailored to your specific needs.</p>
+        <button onclick="alert('Here is your personalized service info!')">Click to Personalize</button>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About This Service</h2>
+        <p>This service is designed to make government services more accessible and easier to navigate. We are working to provide personalized experiences that improve how you interact with government services.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out!</p>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Government Digital Services | All Rights Reserved</p>
+    </div>
+  </footer>
 </body>
 </html>
-
