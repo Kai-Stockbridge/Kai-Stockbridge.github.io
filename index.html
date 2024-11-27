@@ -19,7 +19,8 @@
       <div class="container">
         <h2>Your Personalized Dashboard</h2>
         <p>Get the information you need, tailored to your specific needs.</p>
-        <button onclick="alert('Here is your personalized service info!')">Click to Personalize</button>
+        <button onclick="personalizeDashboard()" aria-label="Personalize Dashboard">Click to Personalize</button>
+        <div id="personalized-message"></div>
       </div>
     </section>
 
@@ -29,6 +30,22 @@
         <p>This service is designed to make government services more accessible and easier to navigate. We are working to provide personalized experiences that improve how you interact with government services.</p>
       </div>
     </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form onsubmit="handleFormSubmit(event)">
+          <label for="user-name">Your Name:</label>
+          <input type="text" id="user-name" name="user-name" required>
+
+          <label for="user-email">Your Email:</label>
+          <input type="email" id="user-email" name="user-email" required>
+
+          <button type="submit">Submit</button>
+        </form>
+        <div id="form-response"></div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -36,6 +53,34 @@
       <p>&copy; 2024 Government Digital Services | All Rights Reserved</p>
     </div>
   </footer>
+
+  <script>
+    function personalizeDashboard() {
+      const dashboardMessage = document.getElementById('personalized-message');
+      dashboardMessage.innerHTML = `
+        <h3>Welcome, User!</h3>
+        <p>Your personalized services are ready. Here are your options:</p>
+        <ul>
+          <li>Tax Services</li>
+          <li>Public Records</li>
+          <li>Licensing Information</li>
+        </ul>
+      `;
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById('user-name').value;
+      const email = document.getElementById('user-email').value;
+
+      const responseDiv = document.getElementById('form-response');
+      responseDiv.innerHTML = `
+        <h3>Thank you for submitting your information!</h3>
+        <p>Name: ${name}</p>
+        <p>Email: ${email}</p>
+      `;
+    }
+  </script>
 </body>
 </html>
 
