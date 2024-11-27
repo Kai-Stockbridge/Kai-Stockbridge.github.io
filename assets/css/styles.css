@@ -11,11 +11,33 @@ body {
   background-color: #f4f4f4;
   color: #333;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   height: 100vh;
   margin: 0;
   padding-bottom: 60px; /* Adds space for the fixed footer */
+}
+
+/* Header - Fullscreen */
+header {
+  background-color: #0066cc;
+  color: white;
+  padding: 0; /* Remove padding */
+  height: 100vh; /* Full height of the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 1.5em;
 }
 
 /* Container for content */
@@ -24,37 +46,6 @@ body {
   max-width: 800px; /* Centers the content */
   margin: 0 auto;
   padding: 20px;
-}
-
-/* Headings */
-h1, h2 {
-  color: #004080;
-  text-align: center;
-}
-
-/* Paragraphs */
-p {
-  text-align: center;
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
-/* Header */
-header {
-  background-color: #0066cc;
-  color: white;
-  padding: 30px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.2em;
 }
 
 /* Main Sections */
@@ -159,20 +150,11 @@ section:hover {
   }
 
   header h1 {
-    font-size: 2em; /* Smaller heading on mobile */
+    font-size: 2.5em; /* Adjust heading size for mobile */
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav li {
-    margin: 10px 0;
-  }
-
-  button {
-    padding: 12px 25px; /* Slightly smaller button on mobile */
+  header p {
+    font-size: 1.3em; /* Adjust paragraph size for mobile */
   }
 
   section h2 {
